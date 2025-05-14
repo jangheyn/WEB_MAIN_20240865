@@ -18,9 +18,13 @@
             } 
             </style>
             <script type="text/javascript" defer src="../js/login.js"></script>
+            <script type="text/javascript" defer src="../js/crypto.js"></script>
+            <script type="text/javascript" defer src="../js/jwt_token.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.5/purify.min.js" integrity="sha512-/CUtA84sWWqWEBejNrrtWa7Yc4cth3Ome2ymvCKOo9YcZ4sh98tndUy4LutE2xGcAgD4fyz16y+gSyJdGCB5ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" defer src="../js/crypto.js"></script>
     </head>
-    <section class="vh-100 gradient-custom">
+    <body style="background-color: blue;" onload="checkAuth(); init_logined();
+    <section class='vh-100 gradient-custom">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -53,7 +57,13 @@
                     </div>
       
                   </div>
-      
+                  
+                  <div class="checkbox mb-3">
+                    <label>
+                    <input type="checkbox" value="remember-me" id="idSaveCheck"> 아이디 기억
+                    </label>
+                    </div>
+
                   <div>
                     <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
                     </p>
@@ -65,4 +75,6 @@
           </div>
         </div>
       </section>
+      <body class="text-center" onload="init();">
+        </body>
       </html>
