@@ -1,3 +1,4 @@
+import { session_set, session_get, session_check } from './session.js';
 function encodeByAES256(key, data){ 
     const cipher = CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(key), {
     iv: CryptoJS.enc.Utf8.parse(""), // IV 초기화 벡터
@@ -19,7 +20,7 @@ function encodeByAES256(key, data){
         const k = "key"; // 클라이언트 키
         const rk = k.padEnd(32, " "); // AES256은 key 길이가 32
         const b = password;
-        const eb = this.encodeByAES256(rk, b); // 실제 암호화
+        const eb = encodeByAES256(rk, b); // 실제 암호화
         return eb;
         consloe
         }
