@@ -26,16 +26,13 @@ function init() {
             check.checked = true;
         }
         session_check(); // 세션 유무 검사
-        document.addEventListener('DOMContentLoaded', () => {
-            init();
-            checkAuth();
-            init_logined();
-        });
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     init();
+    checkAuth();
+    init_logined();
 });
 
 function init_logined() {
@@ -144,10 +141,7 @@ const check_input = () => {
         return false;
     }
 
-    if (!sanitizedEmail) {
-        return false;
-    }
-    if (!sanitizedPassword) {
+    if (!sanitizedEmail || !sanitizedPassword) {
         return false;
     }
 
@@ -155,7 +149,7 @@ const check_input = () => {
     console.log('비밀번호:', passwordValue);
     loginForm.submit();
 
-    if (idsave_check.checked == true) {
+    if (idsave_check.checked === true) {
         alert("쿠키를 저장합니다.", emailValue);
         setCookie("id", emailValue, 1);
         alert("쿠키 값 :" + emailValue);

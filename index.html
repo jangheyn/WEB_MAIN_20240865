@@ -1,113 +1,160 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script type="text/javascript" src="js/js_test.js"></script>
-        <meta name=“author” content=“학번”>
-        <meta name=“keywords” content=“computer”>
-        <!-- <base href="http://127.0.0.1:5500"> -->
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LOL 메인화면</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        </a>
-        <style>
-            table {
-            font-size: 20pt;
-            color: white;
-            } 
-            </style>
-            <script type="text/javascript" defer src="js/popup.js"></script>
-            <script type="text/javascript" defer src="js/js_search.js"></script>
-    </head>
-    <body style="background-color: black;" onload="pop_up();">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <nav class="navbar bg-body-tertiary">
-                    <div class="container-fluid">
-                      <a class="image/화면 캡처.jpg" href="#">
-                        <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+<head>
+    <meta name="author" content="학번">
+    <meta name="keywords" content="computer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOL 메인화면</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white; /* 바탕 하얀색 */
+            color: black; /* 기본 글자색도 검정으로 변경 */
+        }
+        table {
+            font-size: 20pt; /* 글자 크기 통일 */
+            color: black; /* 글자 색 검정 */
+            border-collapse: collapse; /* 테두리 겹침 제거 */
+            width: 80%; /* 표 너비 통일 */
+        }
+        table, th, td {
+            border: 2px solid black; /* 테두리 굵기 통일 */
+            padding: 10px; /* 셀 안 여백 */
+            text-align: center; /* 가운데 정렬 */
+        }
+        a {
+            color: inherit; /* 링크 색 글자색과 동일 */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+        a:hover {
+            text-decoration: underline; /* 마우스 올리면 밑줄 */
+        }
+        caption {
+            caption-side: top;
+            font-weight: bold;
+            font-size: 24pt;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 기존 네비게이션 등 그대로 유지 -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="image/아리스.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                         Bootstrap
-                      </a>
-                    </div>
-                  </nav>
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
+                </div>
+            </nav>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login/profile.html" target='_blank'>기본정보(프로필)</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Disabled</a></li>
                 </ul>
-                <form class="d-flex" role="search" onsubmit="return googleSearch();">
-                  <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
-                  <button class="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>
-                  </form>
-              </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
-            <a href="login/login.html" class="btn btn-outline-success" id="login_btn">로그인</a>
-          </nav>
-        <div style="display: flex; justify-content: center;">
-            <img src="image/캡처.PNG" width="100" height ="50">
-            <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: aqua"></h3>
         </div>
-        <div style="display: flex; justify-content: center;">
-            <a href="index.html" target="_blank">
-                <img src="image/download.jpg" width="100" height="60">
-             </a>
-          </div>
-        <hr> 
-        <div style="display: flex; justify-content: center;">
-            <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family: '굴림';"> 라이엇 게임임</h3>
-        </div>
-        <div style="display: flex; justify-content: center;">
-            <table border="1">
-                <caption>인기 캐릭터</caption>
-                <tbody>
-                <tr bgcolor="red">
-                <td width="80" rowspan="2">사이온</td>
-                <td>아리</td>
-                <td>가렌</td>
-                <td>가렌2</td>
-                <td>가렌3</td>
-                </tr>
-                <tr bgcolor="grey">
-                <td>아리</td>
-                <td>가렌</td>
-                <td>가렌2</td>
-                <td>가렌3</td>
+    </nav>
+
+    <div style="display: flex; justify-content: center;">
+        <img src="image/캡처.PNG" width="100" height ="50">
+        <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: aqua"></h3>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <a href="index.html" target="_blank">
+            <img src="image/아리스.jpg" width="100" height="60">
+        </a>
+    </div>
+    <hr>
+    <div style="display: flex; justify-content: center;">
+        <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: black; font-family: '굴림';"> 라이엇 게임임</h3>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <table>
+            <caption>리그오브레전드 캐릭터</caption>
+            <tbody>
+                <tr>
+                    <td><a href="https://namu.wiki/w/가렌" target="_blank">가렌</a></td>
+                    <td><a href="https://namu.wiki/w/갈리오" target="_blank">갈리오</a></td>
+                    <td><a href="https://namu.wiki/w/갱플랭크" target="_blank">갱플랭크</a></td>
+                    <td><a href="https://namu.wiki/w/그라가스" target="_blank">그라가스</a></td>
+                    <td><a href="https://namu.wiki/w/그레이브즈" target="_blank">그레이브즈</a></td>
                 </tr>
                 <tr>
-                <td bgcolor="blue"><b>카직스</b></td>
-                <td>루시안</td>
-                <td>루시안2</td>
-                <td>
-                    <img src="image/download.jpg" width="100" height="50">
-                </td>
-                <td colspan="2"><font size="13">바이1, 2</font></td>
+                    <td><a href="https://namu.wiki/w/그웬" target="_blank">그웬</a></td>
+                    <td><a href="https://namu.wiki/w/나르" target="_blank">나르</a></td>
+                    <td><a href="https://namu.wiki/w/나미" target="_blank">나미</a></td>
+                    <td><a href="https://namu.wiki/w/나서스" target="_blank">나서스</a></td>
+                    <td><a href="https://namu.wiki/w/나피리" target="_blank">나피리</a></td>
                 </tr>
-                </tbody>
-                </table>
-                
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+                <tr>
+                    <td><a href="https://namu.wiki/w/노틸러스" target="_blank">노틸러스</a></td>
+                    <td><a href="https://namu.wiki/w/녹턴" target="_blank">녹턴</a></td>
+                    <td><a href="https://namu.wiki/w/누누와_윌럼프" target="_blank">누누와 윌럼프</a></td>
+                    <td><a href="https://namu.wiki/w/니달리" target="_blank">니달리</a></td>
+                    <td><a href="https://namu.wiki/w/니코" target="_blank">니코</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://namu.wiki/w/닐라" target="_blank">닐라</a></td>
+                    <td><a href="https://namu.wiki/w/다리우스" target="_blank">다리우스</a></td>
+                    <td><a href="https://namu.wiki/w/다이애나" target="_blank">다이애나</a></td>
+                    <td><a href="https://namu.wiki/w/드레이븐" target="_blank">드레이븐</a></td>
+                    <td><a href="https://namu.wiki/w/라이즈" target="_blank">라이즈</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://namu.wiki/w/라칸" target="_blank">라칸</a></td>
+                    <td><a href="https://namu.wiki/w/람머스" target="_blank">람머스</a></td>
+                    <td><a href="https://namu.wiki/w/럭스" target="_blank">럭스</a></td>
+                    <td><a href="https://namu.wiki/w/럼블" target="_blank">럼블</a></td>
+                    <td><a href="https://namu.wiki/w/레나타_글라스크" target="_blank">레나타 글라스크</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://namu.wiki/w/레넥톤" target="_blank">레넥톤</a></td>
+                    <td><a href="https://namu.wiki/w/레오나" target="_blank">레오나</a></td>
+                    <td><a href="https://namu.wiki/w/렉사이" target="_blank">렉사이</a></td>
+                    <td><a href="https://namu.wiki/w/렐" target="_blank">렐</a></td>
+                    <td><a href="https://namu.wiki/w/렝가" target="_blank">렝가</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://namu.wiki/w/루시안" target="_blank">루시안</a></td>
+                    <td><a href="https://namu.wiki/w/룰루" target="_blank">룰루</a></td>
+                    <td><a href="https://namu.wiki/w/르블랑" target="_blank">르블랑</a></td>
+                    <td><a href="https://namu.wiki/w/리_신" target="_blank">리 신</a></td>
+                    <td><a href="https://namu.wiki/w/리븐" target="_blank">리븐</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://namu.wiki/w/리산드라" target="_blank">리산드라</a></td>
+                    <td><a href="https://namu.wiki/w/릴리아" target="_blank">릴리아</a></td>
+                    <td><a href="https://namu.wiki/w/마스터_이" target="_blank">마스터 이</a></td>
+                    <td><a href="https://namu.wiki/w/마오카이" target="_blank">마오카이</a></td>
+                    <td><a href="https://namu.wiki/w/말자하" target="_blank">말자하</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
